@@ -1,0 +1,28 @@
+{
+  "name": "project-x",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "antd": "^3.7.3",
+    "formik": "^1.0.2",
+    "lodash": "^4.17.10",
+    "moment": "^2.22.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-loadable": "^5.4.0",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "1.1.4",
+    "redux": "^4.0.0",
+    "redux-saga": "^0.16.0",
+    "tui-calendar": "^1.6.0",
+    "yup": "^0.26.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
