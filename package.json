@@ -17,6 +17,7 @@
     "redux": "^4.0.0",
     "redux-saga": "^0.16.0",
     "tui-calendar": "^1.6.0",
+    "tui-chart": "^3.3.1",
     "yup": "^0.26.0"
   },
   "scripts": {
