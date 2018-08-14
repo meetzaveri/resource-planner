@@ -86,31 +86,35 @@ export const fakeApiCall_Projects = (params) => {
       let data = null;
 
       if (params.method === 'GET') {
+        /* Dummy Data to feed componentes */
         data = [
           {
             id: 'f7rcnlvcgieaul6g446o97',
             name: 'Pied Piper',
             teams_assigned: [
               {
-                id: 1,
+                id: 'pp_1',
                 name: 'Android'
               }, {
-                id: 2,
+                id: 'pp_2',
                 name: 'Web'
               }, {
-                id: 3,
+                id: 'pp_3',
                 name: 'IOS'
               }
             ],
             users_assigned: [
               {
                 id: 1,
+                team_id: 'pp_1',
                 name: 'Pattrick Ross'
               }, {
                 id: 2,
+                team_id: 'pp_1',
                 name: 'Taylor Elmwood'
               }, {
                 id: 3,
+                team_id: 'pp_2',
                 name: 'Erlich Bachmann'
               }
             ],
@@ -140,22 +144,24 @@ export const fakeApiCall_Projects = (params) => {
             name: 'Nucleus',
             teams_assigned: [
               {
-                id: 1,
+                id: 'nu_1',
                 name: 'Android'
               }, {
-                id: 2,
+                id: 'nu_2',
                 name: 'Web'
               }, {
-                id: 3,
+                id: 'nu_3',
                 name: 'IOS'
               }
             ],
             users_assigned: [
               {
                 id: 1,
+                team_id: 'nu_2',
                 name: 'Nathan J.'
               }, {
                 id: 2,
+                team_id: 'nu_2',
                 name: 'Carl James'
               }
             ],

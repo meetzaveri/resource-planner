@@ -51,7 +51,10 @@ class Project extends React.Component {
                 .projectData
                 .map((item, index) => <TabPane tab={item.name} key={index + 1}>
                   <Content>
-                    <ContentArea project_name={item.name}/>
+                    <ContentArea
+                      project_name={item.name}
+                      project_data={item}
+                      projectTreeData={this.props.projectTreeData[index]}/>
                   </Content>
                 </TabPane>)}
 
