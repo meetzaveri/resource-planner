@@ -1,30 +1,19 @@
 import React, {Fragment} from 'react';
 import {Layout, Icon, Row, Tabs, Spin} from 'antd';
-import ContentArea from './content';
+import Loadable from 'react-loadable';
 const {Content, Footer} = Layout;
 const TabPane = Tabs.TabPane;
 
-const TabsRender = (props) => {
-  console.log('PROPS IN TABSRENDER', props)
-  if (props.onLoading) {
-    return (
-      <div>
-        Loading projects...
-      </div>
-    )
-  } else {
-    let projects = props
-      .projectData
-      .map((item, index) => <TabPane tab={item.name} key={index}>
-        <Content>
-          Tab1
-        </Content>
-      </TabPane>);
-    console.log('PROJECTS', projects);
-    return (projects)
-  }
+const Loading = () => (
+  <div>
+    Loading ...
+  </div>
+);
 
-}
+const ContentAreaLoader = Loadable({
+  loader: () => import ('./content'),
+  loading: Loading
+});
 
 class Project extends React.Component {
   constructor(props) {
@@ -51,7 +40,8 @@ class Project extends React.Component {
                 .projectData
                 .map((item, index) => <TabPane tab={item.name} key={index + 1}>
                   <Content>
-                    <ContentArea
+                    <ContentAreaLoader
+                      project_temp_id={index + 1}
                       project_name={item.name}
                       project_data={item}
                       projectTreeData={this.props.projectTreeData[index]}/>

@@ -74,7 +74,9 @@ class Content extends React.Component {
             {this.renderTreeNodes(treedata)}
           </Tree>
         </div>
-        <ColumnChart {...this.props}/>
+        <ColumnChart
+          {...this.props}
+          chartid={`chart_id_` + this.props.project_temp_id}/>
       </Fragment>
     )
   }

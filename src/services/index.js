@@ -12,6 +12,7 @@ export const fakeApiCall_A = (params) => {
       let data = null;
 
       if (params.method === 'GET') {
+        /* Dummy Data */
         data = [
           {
             id: 'f7rcnlvcgieaul6g446o97',

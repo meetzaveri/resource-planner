@@ -85,7 +85,7 @@ class ColumnChart extends Component {
         };
     }
     componentDidMount() {
-        var container = document.getElementById('chart_id');
+        var container = document.getElementById(this.props.chartid);
         TuiChart.columnChart(container, this.state.columnData, this.options);
     }
     componentDidUpdate() {
@@ -98,7 +98,7 @@ class ColumnChart extends Component {
     render() {
         return (
             <Fragment>
-                <div id="chart_id"></div>
+                <div id={this.props.chartid}></div>
             </Fragment>
         );
     }
