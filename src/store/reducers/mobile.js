@@ -153,30 +153,3 @@ export const resourcerequest_android = (state = {
   }
 
 }
-
-export const mobile = (state = [], action) => {
-  // console.log('Action ', action);
-
-  switch (action.type) {
-    case m_actions.addresource:
-      {
-        const {deviceInfo, status, timeSlot, teamName, description} = action.payload;
-        console.log('SUCCESS', deviceInfo, status, timeSlot, teamName, description);
-        let success = {
-          message: 'success'
-        };
-        action.onLoadCb(success, null);
-        return [
-          ...state, {
-            deviceInfo,
-            status,
-            timeSlot,
-            teamName,
-            description
-          }
-        ]
-      }
-    default:
-      return state
-  }
-}
